@@ -1,0 +1,255 @@
+/* WA Support Floating Button Styles - Blue Theme */
+    .wa-support-container {
+      position: fixed;
+      bottom: 30px;
+      left: 10px;
+      z-index: 99999;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Hidden state - slide to right edge */
+    .wa-support-container.wa-hidden {
+      transform: translateX(calc(100% - 14px));
+    }
+
+    .wa-support-container.wa-hidden:hover {
+      transform: translateX(calc(100% - 25px));
+    }
+
+    /* Main Button - Blue Solid */
+    .wa-support-main-btn {
+      width: 60px;
+      height: 60px;
+      /*background: radial-gradient(circle at center,#25D366 0%,#1EBE5D 45%,#128C7E 80%,#075E54 100%);
+      */
+      background:#d70000;
+      box-shadow: 0 6px 20px rgba(215, 0, 0, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      transition: box-shadow 0.3s ease;
+      margin-right: 20px;
+    }
+
+    .wa-support-main-btn:hover {
+      box-shadow: 0 6px 20px rgba(0, 102, 153, 0.5);
+    }
+
+    .wa-support-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Hide/Show Toggle Badge */
+    .wa-support-toggle {
+      position: absolute;
+      top: -5px;
+      right: 15px;
+      width: 22px;
+      height: 22px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .wa-support-toggle:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .wa-support-toggle i {
+      font-size: 10px;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    /* Rotate icon when hidden */
+    .wa-support-container.wa-hidden .wa-support-toggle i {
+      transform: rotate(180deg);
+    }
+
+    /* Form Popup - Blue Solid */
+    .wa-support-popup {
+      position: fixed;
+      bottom: 95px;
+      left: 10px;
+      width: 320px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      display: none;
+      overflow: hidden;
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .wa-support-popup-header {
+      background: #25D366;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .wa-support-popup-header i {
+      margin-right: 8px;
+    }
+
+    .wa-support-close {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #93c8e1;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    .wa-support-close:hover {
+      opacity: 1;
+    }
+
+    .wa-support-popup-body {
+      padding: 20px;
+    }
+
+    .wa-support-field {
+      margin-bottom: 15px;
+    }
+
+    .wa-support-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .wa-support-field input,
+    .wa-support-field textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .wa-support-field input:focus,
+    .wa-support-field textarea:focus {
+      outline: none;
+      border-color: #0099CC;
+      box-shadow: 0 0 0 3px rgba(0, 153, 204, 0.1);
+    }
+
+    .wa-support-field textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .wa-support-submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: radial-gradient(circle at center,#25D366 0%,#1EBE5D 45%,#128C7E 80%,#075E54 100%);
+      
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .wa-support-submit-btn:hover {
+      box-shadow: 0 4px 15px rgba(0, 102, 153, 0.4);
+    }
+
+    .wa-support-submit-btn i {
+      margin-right: 8px;
+    }
+
+    /* Success View Styles */
+    .wa-support-success-message {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .wa-support-success-message i {
+      font-size: 48px;
+      color: #28a745;
+      margin-bottom: 15px;
+    }
+
+    .wa-support-success-message p {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .wa-support-success-note {
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      color: #666 !important;
+    }
+
+    .wa-support-back-link {
+      display: block;
+      text-align: center;
+      color: #0099CC;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 10px;
+      border-top: 1px solid #eee;
+      margin-top: 10px;
+    }
+
+    .wa-support-back-link:hover {
+      text-decoration: underline;
+    }
+
+    .wa-support-back-link i {
+      margin-right: 5px;
+    }
+
+    /* Hide popup when container is hidden */
+    .wa-support-container.wa-hidden .wa-support-popup {
+      display: none !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .wa-support-popup {
+        width: calc(100vw - 40px);
+        right: 10px;
+      }
+
+      .wa-support-container {
+        bottom: 15px;
+      }
+    }
